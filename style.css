@@ -1,0 +1,521 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #121212;
+    color: #fdfdfd;
+}
+
+header{
+    width: 100%;
+    background-color: #0f0f0f;
+    padding-bottom: 1rem;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, .1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    font-family: 'Comic Neue', sans-serif;
+    cursor: default;
+}
+
+nav{
+    margin: 1rem .5rem .5rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav span.fa{
+    font-size: .8rem;
+    color: #f0f0f0;
+    padding: .7rem 1rem;
+    margin-left: .5rem;
+    border-radius: 5px;
+    transition: background-color .3s ease-in-out;
+}
+
+.nav span.active{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav span.fa:hover,
+.nav span.fa:focus,
+.nav span.fa:checked{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .1);
+    z-index: 1000;
+}
+
+.notify{
+    color: #f0f0f0;
+    padding: .4rem;
+    margin-right: .9rem;
+    border-radius: 50%;
+    transition: background-color .3s ease-in-out;
+}
+
+.notify::after{
+    content: " ";
+    position: absolute;
+    top: .1rem;
+    left: 1.4rem;
+    background-color: #c40b48;
+    width: .3rem;
+    height: .3rem;
+    border-radius: 50%;
+}
+
+.notify:hover,
+.notify:focus,
+.notify:checked{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.profile-pic{
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.profile-name{
+    font-size: .8rem;
+    margin-left: 7.5px;
+    margin-right: 10px;
+    cursor: default;
+}
+
+.profile-name p:first-child{
+    font-weight: 600;
+}
+
+.profile-name p:last-child{
+    font-size: .75rem;
+    opacity: 70%;
+}
+
+.profile-name .eth{
+    text-transform: uppercase;
+    opacity: initial;
+    color: #ca159b;
+}
+
+.up-down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .05rem .2rem;
+    transition: background-color .3s ease-in-out;
+}
+
+.up-down:hover,
+.up-down:focus{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .15);
+    border-radius: 5px;
+}
+
+.side-one{
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 5rem;
+    left: 0;
+    background-color: #0f0f0f;
+    overflow-x: hidden;
+    padding-top: 2rem;
+}
+   
+.icon a{
+    display: block;
+    position: relative;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    transition: background-color .3s;
+}
+
+.side-one a:nth-child(1){
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+
+.side-one a:nth-child(1):hover,
+.side-one a:nth-child(1):focus{
+    color: #636363;
+}
+
+.side-one a:nth-child(2){
+    color: #c1c40b;
+    margin-bottom: 1.5rem;
+}
+
+.side-one a:nth-child(2):hover,
+.side-one a:nth-child(2):focus{
+    color: #939607;
+}
+
+.side-one a:nth-child(3){
+    color: red;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.side-one a:nth-child(3):hover,
+.side-one a:nth-child(3):focus{
+    color: rgb(219, 0, 0);
+}
+
+.side-one a:nth-child(4){
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+
+.side-one a:nth-child(4):hover,
+.side-one a:nth-child(4):focus{
+    color: #a0a0a0;
+}
+
+main{
+    margin-left: 4rem;
+    position: relative;
+    top: 8rem;
+}
+
+.topic{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px ridge rgba(255, 255, 255, .1);
+}
+
+.topic h4{
+    padding-bottom: .5rem;
+}
+
+.profile-desc{
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    border-bottom: 1px ridge rgba(255, 255, 255, .1);
+    border-right: 1px ridge rgba(255, 255, 255, .1);
+    border-top: 1px ridge rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+
+.profile-desc .profile-name{
+    margin-left: .3rem;
+}
+
+.check{
+    position: relative;
+    top: .6rem;
+    left: -.4rem;
+    color: rgb(0, 225, 255);
+}
+
+main h1{
+    max-width: 25rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-left: .5rem;
+}
+
+.slides{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dot {
+    margin-top: 1rem;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+.active {
+    background-color: #c8f309;
+  }
+
+.details{
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+.bid{
+    margin-top: 1.5rem;
+  }
+
+.bid p{
+    color: rgba(255, 255, 255, .7);
+  }
+
+.purple{
+    color: #ca159b;
+    font-family: 'Poppins', sans-serif;
+  }
+
+#demo{
+    font-family: 'Poppins', sans-serif;
+  }
+
+.purchase{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: .8rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+.buy-now{
+    color: #0f0f0f;
+    background-color: #fdfdfd;
+    padding: .4rem 2rem;
+    border-radius: 4px;
+    transition: background-color .3s ease-in-out;
+  }
+
+.place-bid{
+    color: #f0f0f0;
+    background-color: #000;
+    padding: .5rem 2rem;
+    margin-left: .5rem;
+    border-radius: 4px;
+    transition: background-color .3s ease-in-out;
+  }
+
+a.buy:hover,
+a.buy:focus{
+    background-color: rgb(214, 212, 212);
+  }
+
+a.place:hover,
+a.place:focus{
+    background-color: rgb(10, 10, 10);
+  }
+
+.description{
+    max-width: 20rem;
+    font-size: .85rem;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.light{
+    color: rgba(255, 255, 255, .7);
+    font-size: .8rem;
+  }
+
+  footer{
+    padding-left: 4rem;
+    display: block;
+    margin-right: auto;
+    position: relative;
+    padding-top: 2rem;
+    margin-top: 10rem;
+    background-color: #0f0f0f;
+    width: 100%;
+    height: auto;
+  }
+
+  footer h3{
+    font-weight: 500;
+}
+
+.theNft-brand h2{
+    margin-bottom: 1rem;
+}
+
+.social-icons{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: auto 1rem;
+}
+
+.social-icons span{
+    margin: auto .25rem;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 4%);
+    border-radius: 50%;
+    cursor: default;
+    transition: color .5s ease-in-out;
+}
+
+.social-icons span:hover,
+.social-icons span:focus{
+    background-color: rgba(255, 255, 255, 6%);
+    color: #c40b48;
+}
+
+
+  @media screen and (min-width: 650px){
+
+    .profile{
+        position: relative;
+        padding: 0;
+        background-color: transparent;
+        margin-right: 1rem;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav{
+        margin-left: 5rem;
+    }
+
+    .nav span.fa{
+        font-size: 1rem;
+    }
+
+    main h1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slides{
+        width: 25rem;
+        height: 25rem;
+  }
+
+
+  }
+
+  @media screen and (min-width: 800px){
+    .nav{
+        margin-left: 8rem;
+    }
+
+    .nav span.fa{
+        margin-right: 1rem;
+    }
+  }
+
+
+
+  @media screen and (min-width: 1004px){
+    .flex-post{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav{
+        margin-left: 15rem;
+    }
+
+    .nav span.fa{
+        margin-right: 1rem;
+    }
+
+    .pay-details{
+        position: relative;
+        top: -15rem;
+        left: -16rem;
+    }
+
+    .description{
+        margin-top: -10rem;
+    }
+  }
+
+  @media screen and (min-width: 1040px){
+    .pay-details{
+        top: -18rem;
+        left: -20rem;
+    }
+
+    .slides{
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .nav{
+        margin-left: 16rem;
+    }
+
+    .purchase{
+        font-size: 1rem;
+    }
+
+    .buy-now{
+        padding: .5rem 3rem;
+    }
+
+    .place-bid{
+        padding: .6rem 3rem;
+    }
+
+    .description{
+        font-size: 1rem;
+        max-width: 30rem;
+        margin-top: -12rem;
+      }
+    
+    .light{
+        font-size: .95rem;
+        margin-bottom: .5rem;
+      }
+
+  }
+
+  @media screen and (min-width: 1200px){
+    .nav span.fa{
+        margin-right: 1.5rem;
+        padding: .8rem 2rem;
+    }
+
+    main h1{
+        font-size: 3.5rem;
+        max-width: 35rem;
+        margin-top: 2rem;
+        line-height: 4.5rem;
+    }
+  }

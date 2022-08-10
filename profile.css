@@ -1,0 +1,282 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #121315;
+    color: #f0f0f0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.light{
+    opacity: 75%;
+}
+
+.purple{
+    color: #c40b48;
+}
+
+.eth{
+    color: #ca159b;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px ridge rgba(255, 255, 255, .05);
+}
+
+.cancel .fa{
+    cursor: pointer;
+}
+
+.cancel{
+    position: relative;
+    transition: color .2s ease;
+}
+
+.cancel:hover,
+.cancel:focus,
+.cancel:checked{
+    color: #939607;
+}
+
+.cancel:hover.cancel a{
+    text-decoration: underline;
+}
+
+.cancel a{
+    position: absolute;
+    font-size: .8rem;
+    margin-left: .25rem;
+    margin-top: .25rem;
+    white-space: nowrap;
+    opacity: 75%;
+}
+
+.empty a{
+    font-size: .8rem;
+}
+
+.empty:hover,
+.empty:focus,
+.empty:checked{
+    color: #939607;
+}
+
+.back-to-home{
+    position: absolute;
+    text-transform: lowercase;
+    font-size: .8rem;
+}
+
+.details{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.check{
+    position: relative;
+    top: -.3rem;
+    left: -1.5rem;
+    color: rgb(0, 225, 255);
+}
+
+.name{
+    margin-top: .5rem;
+    line-height: 1.2rem;
+}
+
+.hash{
+    font-size: .75rem;
+}
+
+.profile-pic{
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.balance{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .08);
+    box-shadow: 1px 2px 1px 1px rgba(255, 255, 255, .08);
+    padding: .8rem 1rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.add{
+    font-size: .9rem;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+
+.add:hover,
+.add:focus{
+    color: #939607;
+}
+
+.left .fa:first-of-type{
+    color: #c40b48;
+    font-size: 1.8rem;
+}
+
+.your-balance{
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.your-balance p{
+    font-size: 1.2rem;
+    cursor: default;
+}
+
+.your-balance .light{
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.your-balance small{
+    color: #939607;
+    cursor: default;
+}
+
+.post-follow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.post-follow .small{
+    font-size: .75rem;
+}
+
+.post-follow > div{
+    border-radius: 4px;
+}
+
+.post-follow div:first-child{
+    padding: .5rem 1.8rem;
+    color: #0f0f0f;
+    background-color: #939607;
+}
+
+.post-follow div:nth-child(2){
+    padding: .47rem 1.3rem;
+    background-color: rgba(255, 255, 255, .08);
+    box-shadow: 1px 2px 1px 1px rgba(255, 255, 255, .08);
+    margin-left: .5rem;
+}
+
+.post-follow div:nth-child(3){
+    padding: .47rem 1rem;
+    background-color: rgba(255, 255, 255, .08);
+    box-shadow: 1px 2px 1px 1px rgba(255, 255, 255, .08);
+    margin-left: .5rem;
+}
+
+.notification{
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notify-heading{
+    position: relative;
+}
+
+.new{
+    font-size: .6rem;
+    position: absolute;
+    top: -.3rem;
+    left: 6.2rem;
+    background-color: #c40b48;
+    padding: .05rem .3rem;
+    border-radius: 50%;
+}
+
+.myNotify{
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .05);
+    transition: background-color .2s ease-in-out;
+}
+
+.myNotify:hover,
+.myNotify:focus{
+    background-color: rgba(255, 255, 255, .08)
+}
+
+.myNotify-class > *{
+    display: flex;
+    align-items: center;
+}
+
+.nft-profile h3{
+    width: 3rem;
+    margin-left: .5rem;
+    text-align: center;
+    background-color: #ca159b;
+    border-radius: 50%;
+    border-left: 2px ridge;
+    cursor: default;
+}
+
+.nft-profile img{
+    width: 2.5rem;
+    margin-left: .5rem;
+    border-radius: 50%;
+}
+
+.nft-profile h3{
+    font-weight: 100;
+    padding: .5rem .1rem;
+}
+
+.notify-details{
+    max-width: 15rem;
+    line-height: 1rem;
+    margin-left: 1.5rem;
+    cursor: default;
+    opacity: 95%;
+}
